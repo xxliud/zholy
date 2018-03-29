@@ -1,37 +1,34 @@
-## Welcome to GitHub Pages
+## Welcome to this page.
+![Image](http://oiilv6zo9.bkt.clouddn.com/holy3.jpeg)
+### 简介
+下面我将要介绍一下这个项目. 
+1. 这个项目的初衷是为了服务大家能在线阅读圣经,为此我们提供了经文查询的api以及适配各个终端的客户端软件
+2. pc端的软件统一由我进行打包发布,下载地址如下:[Link to Pc Holy](http://ilovezczm.com),请根据自己的电脑进行下载
 
-You can use the [editor on GitHub](https://github.com/xxliud/zholy/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### 开发框架
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- electron: [electron-vue](https://www.gitbook.com/book/simulatedgreg/electron-vue/details)   
+- app: [cordova+vue](http://cordova.axuer.com/)
+- wx: [mpvue](http://mpvue.com/)+[weui](https://kuangpf.github.io/mpvue-weui/#/)
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 打包
 
-```markdown
-Syntax highlighted code block
+electron
 
-# Header 1
-## Header 2
-### Header 3
+- window平台,请使用yarn进行依赖安装,不然有的包无法打入安装文件造成安装后空白的异常
+  yarn i && yarn run build
+- mac平台,使用yarn和cnpm均可成功安装
 
-- Bulleted
-- List
+app
+- ios平台 本人未尝试进行ipa打包,因为没有苹果开发着账号
+- android平台 自行build apk文件
 
-1. Numbered
-2. List
+wx
+- 小程序请自行搜索zholy
 
-**Bold** and _Italic_ and `Code` text
+![Image](http://oiilv6zo9.bkt.clouddn.com/holywx.jpg)
 
-[Link](url) and ![Image](src)
+```javascript
+    console.log('愿上帝祝福你')
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xxliud/zholy/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
