@@ -31,8 +31,6 @@ export default {
   data() {
     return {
       info: {},
-      to: '../select/select?info=' + JSON.stringify(this.info),
-      info: {},
       select: true,
       old_list: [],
       new_list: []

@@ -1,15 +1,6 @@
 <template>
-  <div class="page" @click="goto_select">
-    <div class="page__bd">
-      <div class="weui-grids">
-        <block v-for="item in grids" :key="item">
-          <navigator url="item.url" class="weui-grid" hover-class="weui-grid_active">
-            <image class="weui-grid__icon" :src="item.src" />
-            <div class="weui-grid__label">{{item.name}}</div>
-          </navigator>
-        </block>
-      </div>
-    </div>
+  <div class="page" @click="goto_select()">
+    <img src="http://oiilv6zo9.bkt.clouddn.com/wx-logo.jpeg" style="display:block;margin:0 auto;height:700px; width: auto;"/>
   </div>
 </template>
 
@@ -18,30 +9,28 @@ import base64 from '../../../static/images/base64'
 export default {
   data() {
     return {
-      grids: [
-        { src: '../../../static/images/icon_nav_button.png', name: 'Read', url: '../juan/juan'},
-        { src: '../../../static/images/icon_nav_cell.png', name: 'Search', url: '../juan/juan' },
-        { src: '../../../static/images/icon_nav_toast.png', name: 'WeCenter', url: '../juan/juan'}
-      ]
+      fn: true
     }
   },
   components: {
   },
   methods: {
     goto_select: function () {
+      var _this = this
+      this.fn = false
       wx.navigateTo({
-        url: '../juan/juan'
-      })
-    },
-    multiLinkagePicker: function () {
-      wx.navigateTo({
-        url: '../select/select?zcbb=' + JSON.stringify(this.zcbb) 
+        url: '../juan/juan',
+        success: function(){
+          _this.fn = true
+        }
       })
     }
   },
 
   created() {
-    // setTimeout(this.goto_select, 3000)
+    if (this.fn) {
+      setTimeout(this.goto_select, 1500)
+    }
   }
 }
 </script>

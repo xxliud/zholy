@@ -14,6 +14,7 @@ export default {
     pages: [
       '^pages/index/index',
       'pages/juan/juan',
+      'pages/holy/holy',
       'pages/zhang/zhang'
     ], // Will be filled in webpack
     window: {
